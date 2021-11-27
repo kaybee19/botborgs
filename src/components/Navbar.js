@@ -13,9 +13,16 @@ const Root = styled('div')`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	& > div {
-		display: flex;
-		align-items: center;
+`;
+
+const Logo = styled('img')`
+	width: 260px;
+	height: auto;
+	@media (max-width: 900px) {
+		width: 200px;
+	}
+	@media (max-width: 600px) {
+		width: 150px;
 	}
 `;
 
@@ -33,6 +40,14 @@ const Image = styled('div')`
 	}
 `;
 
+const Body = styled('div')`	
+	display: flex;
+	align-items: center;
+	@media (max-width: 900px) {
+		display: none;
+	}
+`;
+
 export default class Navbar extends React.Component {
 
 	render() {
@@ -40,9 +55,9 @@ export default class Navbar extends React.Component {
 		return (
 			<Root>
 				<Link to="/">
-					<img src={botborgs} width="260" alt="logo" />
+					<Logo src={botborgs} alt="logo" />
 				</Link>
-				<div>
+				<Body>
 					<a href="https://discord.com" target="_blank">
 						<Image>
 							<img src={discord} alt="discord" width="25" />
@@ -58,7 +73,7 @@ export default class Navbar extends React.Component {
 							<img src={medium} alt="medium" width="25" />
 						</Image>
 					</a>
-				</div>
+				</Body>
 			</Root>
 		)
 	}

@@ -24,9 +24,6 @@ const Acc = styled(Accordion)`
 	box-shadow: none!important;
 	padding-bottom: .5rem;
 	border-bottom: 1px solid rgba(255,255,255,.25);
-	& .hidden {
-
-	}
 	& .MuiAccordionSummary-root {
 		padding: 0;
 	}
@@ -40,6 +37,11 @@ const Acc = styled(Accordion)`
 		&:before {
 			opacity: 0;
 			transition: .25s;
+		}
+	}
+	@media (max-width: 760px) {
+		& h5 {
+			font-size: 16px;
 		}
 	}
 `;
@@ -78,6 +80,9 @@ const ExpandIcon = styled('div')`
 		justify-content: center;
 		background-color: #ea02ea;
 		opacity: 1;
+	}
+	@media (max-width: 760px) {
+		transform: scale(.75);
 	}
 `;
 

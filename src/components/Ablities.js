@@ -24,6 +24,7 @@ const BackG = styled('div')`
 		height: 8px;
 		width: 110%;
 	}
+
 	&:after {
 		position: absolute;
 		content: '';
@@ -32,6 +33,14 @@ const BackG = styled('div')`
 		background: radial-gradient(50% 50% at 50% 50%, #EA00EA 68.23%, rgba(234, 0, 234, 0) 100%);
 		height: 8px;
 		width: 110%;
+	}
+	@media (max-width: 600px) {
+		&:before {
+  	  left: -25px;
+		}
+		&:after {
+  	  left: -25px;
+		}
 	}
 `;
 

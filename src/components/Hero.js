@@ -10,10 +10,38 @@ const Root = styled('div')`
 	justify-content: space-between;
 	align-items: center;
 	& img {
+		height: fit-content;
+		width: 650px;
 		&:first-of-type {
 			margin-top: -100px;
 		}
-		height: fit-content;
+		@media (max-width: 900px) {
+			width: 350px;
+		}
+	}
+	@media (max-width: 1200px) {
+		& img {
+			width: 450px;
+		}
+	}
+	@media (max-width: 900px) {
+		flex-direction: column;
+		& img {
+			width: 450px;
+			margin-left: auto;
+			&:first-of-type {
+				margin-top: 0;
+				margin-right: auto;
+				margin-left: 0;
+				margin-bottom: 3rem;
+			}
+		}
+	}
+	@media (max-width: 600px) {
+		padding: 2rem 0 0;
+		& img {
+			width: calc(100vw - 25px);
+		}
 	}
 `;
 
@@ -46,6 +74,12 @@ const Enter = styled('div')`
 		height: 8px;
 		width: 100%;
 	}
+	@media (max-width: 900px) {
+		height: 75px;
+	}
+	@media (max-width: 600px) {
+		height: 50px;
+	}
 `;
 
 const Text = styled('div')`
@@ -60,6 +94,14 @@ const Text = styled('div')`
 	width: fit-content;
 	margin: auto;
 	cursor: pointer;
+	@media (max-width: 900px) {
+		font-size: 30px;
+    line-height: 40px;
+	}
+	@media (max-width: 600px) {
+		font-size: 20px;
+    line-height: 30px;
+	}
 `;
 
 export default class Hero extends React.Component {
@@ -71,8 +113,8 @@ export default class Hero extends React.Component {
 				</Enter>
 				<BackG>
 					<Root>
-						<img src={panel1} alt="panel left" width="650" />
-						<img src={panel2} alt="panel right" width="650" />
+						<img src={panel1} alt="panel left" />
+						<img src={panel2} alt="panel right" />
 					</Root>
 				</BackG>
 			</div>

@@ -40,12 +40,19 @@ const Root = styled('div')`
 			align-items: center;
 			justify-content: center;
 		}
+		@media (max-width: 900px) {
+			top: -40px;
+			right: 50px;
+		}
 	}
 	& .alice-carousel__prev-btn-item > span {
 		&:after {
 			content: "\\2190";
 			left: 0px;
 		}
+	}
+	@media (max-width: 1100px) {
+		margin-left: 0px;
 	}
 `;
 
@@ -80,14 +87,14 @@ export default function Team(props) {
 
 	const responsive = {
 			300: { items: 1 },
-	    830: { items: 2 },
-	    1100: { items: 3 },
+	    660: { items: 2 },
+	    950: { items: 3 },
 	    1400: { items: 4 },
 	};
 
 	return (
 		<Root>
-			<p className="textHeader" style={ props.style ? props.style : {paddingTop:'2rem',paddingBottom:0}}><span style={{color:'white'}}>the</span> team</p>
+			<p className="textHeader" style={{paddingTop:'2rem',paddingBottom:0, textAlign: props.style}}><span style={{color:'white'}}>the</span> team</p>
 			{props.team}
 	    <AliceCarousel
 	        items={

@@ -12,7 +12,6 @@ const Root = styled('div')`
 
 const BackG = styled('div')`
 	background: linear-gradient(180deg, #72045A 0%, #0B0514 50%);
-	padding-bottom: 4rem;
 `;
 
 const Body = styled('div')`

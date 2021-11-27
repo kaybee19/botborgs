@@ -48,6 +48,10 @@ const GlobalStyle = createGlobalStyle`
 		-webkit-text-stroke: 1px black;
 		margin: 0rem;
 		padding: 2.5rem 0;
+		@media (max-width: 900px) {
+			font-size: 28px;
+    	line-height: 35px;
+		}
 	}
 	.textSubHeader {
 		font-family: 'Robotika'!important;
@@ -56,6 +60,10 @@ const GlobalStyle = createGlobalStyle`
 		font-size: 24px;
 		line-height: 29px;
 		text-transform: uppercase;
+		@media (max-width: 900px) {
+			font-size: 16px;
+			line-height: 22px;
+		}
 	}
 	.textSub {
 		margin: 0 0 .25rem;

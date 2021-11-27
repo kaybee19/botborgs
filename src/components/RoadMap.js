@@ -12,7 +12,6 @@ const Root = styled('div')`
 
 const BackG = styled('div')`
 	background: linear-gradient(270deg, #72045A 0%, #0B0514 50%);
-	padding-bottom: 4rem;
 	position: relative;
 	overflow: hidden;
 	&:after {
@@ -23,6 +22,11 @@ const BackG = styled('div')`
 		background: radial-gradient(50% 50% at 50% 50%, #EA00EA 68.23%, rgba(234, 0, 234, 0) 100%);
 		height: 8px;
 		width: 110%;
+	}
+	@media (max-width: 600px) {
+		&:after {
+  	  left: -25px;
+		}
 	}
 `;
 

@@ -31,6 +31,11 @@ const Root = styled('div')`
     	}
 		}
 	}
+	@media (max-width: 600px) {
+		& .pathBorder {
+			display: none;
+		}
+	}
 `;
 
 const Border = styled('div')`
@@ -61,6 +66,13 @@ const Body = styled('div')`
 	max-width: 900px;
 	position: relative;
 	display: flex;
+	align-items: center;
+	@media (max-width: 800px) {
+		flex-direction: column!important;
+	}
+	@media (max-width: 600px) {
+		margin-left: 0px;
+	}
 `;
 
 const Text = styled('p')`
@@ -73,6 +85,9 @@ const Text = styled('p')`
 
 const Box = styled('div')`
 	min-width: 340px;
+	@media (max-width: 950px) {
+		display: none;
+	}
 `;
 
 const Image = styled('img')`
@@ -93,24 +108,36 @@ const Image = styled('img')`
     	height: 90%;
     	top: 0px;
     }
+    @media (max-width: 1100px) {
+    	height: 85%;
+    }
 	}
 	&.interplanetary {
     left: -50px;
     height: 112.5%;
     width: auto;
     top: -30px;
+    @media (max-width: 1100px) {
+    	height: 100%;
+    }
 	}
 	&.games {
     right: 0px;
     height: 140%;
     width: auto;
     top: -75px;
+    @media (max-width: 1100px) {
+    	height: 120%;
+    }
 	}
 	&.home {
     left: -85px;
     height: 127.5%;
     width: auto;
     top: -60px;
+    @media (max-width: 1100px) {
+    	height: 110%;
+    }
 	}
 	&.artists {
     right: -25px;
@@ -118,6 +145,18 @@ const Image = styled('img')`
     width: auto;
     top: -75px;
     transform: rotate(10deg);
+    @media (max-width: 1100px) {
+    	height: 120%;
+    }
+	}
+	@media (max-width: 950px) {
+		position: relative;
+		min-width: 300px;
+		width: 50%!important;
+		height: auto;
+		left: 0!important;
+		right: 0!important;
+		top: 0!important;
 	}
 `;
 

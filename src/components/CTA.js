@@ -7,6 +7,9 @@ const Root = styled('div')`
 	padding: 7.5rem 2rem;
 	margin: auto;
 	position: relative;
+	@media (max-width: 600px) {
+		padding: 2rem;
+	}
 `;
 
 const BackG = styled('div')`
@@ -15,11 +18,17 @@ const BackG = styled('div')`
 `;
 
 const Text = styled('p')`
-	font-size: 72px;
-	line-height: 120%;
 	text-align: center;
-	color: white;
 `;
+
+const Div = styled('div')`
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	@media (max-width: 600px) {
+		flex-direction: column;
+	}
+`
 
 const Call = styled('div')`
 	border: 2px solid #4F4185;
@@ -28,11 +37,26 @@ const Call = styled('div')`
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	min-width: 242px;
+	min-width: 300px;
 	margin: 0 1rem;
 	& p {
 		padding-left: 1rem;
 		font-size: 18px;
+	}
+	@media (max-width: 900px) {
+		min-width: 250px;
+		& p {
+			font-size: 14px;
+		}
+	}
+	@media (max-width: 600px) {
+		min-width: 200px;
+		max-width: 200px;
+		margin: auto;
+		margin-top: 1rem;
+		& p {
+			font-size: 13px;
+		}
 	}
 `;
 
@@ -44,9 +68,9 @@ export default class CTA extends React.Component {
 			<BackG>
 				<Root>
 					<Text className="textHeader">THE BOTBORGS ARE TAKING OVER THE METAVERSE</Text>
-					<div style={{display:'flex', width:'100%', justifyContent:'center'}}>
+					<Div>
 						<a target="_blank" class="linkClass" href="https://twitter.com">
-							<Call style={{minWidth: 329}}>
+							<Call>
 								<img src={discord} width="18" alt="twitter-logo" />
 								<p className="font-coven" style={{margin:0}}>Join the community</p>
 							</Call>
@@ -57,7 +81,7 @@ export default class CTA extends React.Component {
 								<p className="font-coven" style={{margin:0}}>Follow Us</p>
 							</Call>
 						</a>
-					</div>
+					</Div>
 				</Root>
 			</BackG>
 		)

@@ -11,6 +11,10 @@ import CTA from '../components/CTA';
 
 export default function Home() {
 
+	React.useEffect(() => {
+	  window.scrollTo(0, 0)
+	});
+	
 	return (
 		<React.Fragment>
 			<HeroVideo />

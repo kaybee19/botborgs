@@ -18,6 +18,15 @@ const Image = styled('img')`
 	object-fit: cover;
 	padding: 1rem;
 	margin-right: 2rem;
+	@media (max-width: 900px) {
+		width: 300px;
+		height: 300px;
+	}
+	@media (max-width: 750px) {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
 `;
 
 const Body = styled('div')`
@@ -25,6 +34,12 @@ const Body = styled('div')`
 	max-width: 1100px;
 	display: flex;
 	align-items: center;
+	@media (max-width: 900px) {
+		padding-right: 2rem;
+	}
+	@media (max-width: 750px) {
+		flex-direction: column;
+	}
 `;
 
 export default function Teams() {
@@ -36,9 +51,6 @@ export default function Teams() {
 	const location = useLocation();
 	const path = location.pathname.split('team/')[1];
 	const getMember = data.filter(f => f.id === path)[0];
-	const style = {
-
-	}
 
 	const markUp = (
 		<Body>
@@ -53,7 +65,7 @@ export default function Teams() {
 
 	return (
 		<BackG>
-				<Team team={markUp} />
+				<Team style="center" team={markUp} />
 				<FactoryVid />
 				<CTA />
 		</BackG>
