@@ -11,13 +11,13 @@ const Root = styled('div')`
 		& video {
 			height: 500px;
 			position: relative;
-			right: 48%;
+			right: 75%;
 			width: auto!important;
 		}
 	}
 	@media (max-width: 450px) {
 		& video {
-			right: 75%;
+			right: 135%;
 		}
 	}
 `;

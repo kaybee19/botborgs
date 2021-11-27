@@ -13,7 +13,7 @@ const Root = styled('div')`
 		width: 37.5px;
 	}
 	@media (max-width: 900px) {
-		padding-top: 2rem;
+		padding: 2rem 0;
 		flex-direction: column;
 		& img {
 			margin-right: 1rem;
@@ -44,8 +44,8 @@ export default class Footer extends React.Component {
 					<a class="linkClass" target="_blank" href="https://discord.com"><img src={discord} alt="discord" /></a>
 				</div>
 				<Text className="font-space">
-					<img width="36" style={{marginRight:5}} src={copy} alt="copyright" />
-					2021 botborgs
+					<img width="36" style={{marginLeft:0}} src={copy} alt="copyright" />
+					<span style={{marginRight:5}}>2021 botborgs</span>
 				</Text>
 			</Root>
 		)
