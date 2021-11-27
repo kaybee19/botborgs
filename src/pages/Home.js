@@ -18,7 +18,6 @@ export default function Home() {
 			<Ablities />
 			<RoadMap />
 			<FAQ />
-			{/**/}
 			<FactoryVid />
 			<CTA />
 		</React.Fragment>

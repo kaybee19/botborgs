@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import { botborgs, medium, twitter, discord } from '../assets/images';
 
@@ -38,7 +39,9 @@ export default class Navbar extends React.Component {
 
 		return (
 			<Root>
-				<img src={botborgs} width="260" alt="logo" />
+				<Link to="/">
+					<img src={botborgs} width="260" alt="logo" />
+				</Link>
 				<div>
 					<a href="https://discord.com" target="_blank">
 						<Image>

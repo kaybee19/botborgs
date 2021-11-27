@@ -1,4 +1,5 @@
 import React from 'react'
+import Team from '../components/Team';
 import styled from 'styled-components';
 import FaqAccordion from './FaqAccordion';
 
@@ -46,6 +47,7 @@ export default class FAQ extends React.Component {
 						}
 					</Body>
 				</Root>
+				<Team />
 			</BackG>
 		)
 	}

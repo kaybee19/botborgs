@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { factory } from '../assets/images';
 
 const Root = styled('div')`
+  max-height: 809px;
 	border-top: 7.5px solid #72045A;
 	border-bottom: 7.5px solid #72045A;
 `;

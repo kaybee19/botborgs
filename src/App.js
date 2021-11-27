@@ -9,14 +9,20 @@ import Footer from './components/Footer';
 
 // Pages
 import Home from './pages/Home';
+import Teams from './pages/Teams';
 
 function App() {
   return (
     <BrowserRouter>
       <GlobalStyle />
+
       <Navbar />
-      <Home />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/team' component={Teams} />
+      </Switch>
       <Footer />
+
     </BrowserRouter>
   );
 }
