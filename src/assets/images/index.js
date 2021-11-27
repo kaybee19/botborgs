@@ -20,3 +20,4 @@ export {default as courtney } from './courtney.png';
 export {default as artists_2 } from './artists_2.png';
 export {default as developers } from './developers.png';
 export {default as nerds } from './nerds.png';
+export {default as enter } from './enter.png';

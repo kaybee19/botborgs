@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import { panel1, panel2 } from '../assets/images'
+import { panel1, panel2, enter } from '../assets/images'
 
 const Root = styled('div')`
 	padding: 5rem 0 0;
@@ -11,9 +11,12 @@ const Root = styled('div')`
 	align-items: center;
 	& img {
 		height: fit-content;
-		width: 650px;
+		width: 750px;
 		&:first-of-type {
 			margin-top: -100px;
+		}
+		@media (max-width: 1450px) {
+			width: 659px;
 		}
 		@media (max-width: 900px) {
 			width: 350px;
@@ -55,7 +58,14 @@ const Enter = styled('div')`
 	height: 96px;
 	width: 100%;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	background: linear-gradient(90deg, #0B0514 9.38%, #5F4DAA 52.08%, #0B0514 86.98%);
+	& img {
+		cursor: pointer;
+		width: auto;
+		height: 60px;
+	}
 	&:before {
 		position: absolute;
 		content: '';
@@ -76,9 +86,15 @@ const Enter = styled('div')`
 	}
 	@media (max-width: 900px) {
 		height: 75px;
+		& img {
+			height: 40px;
+		}
 	}
 	@media (max-width: 600px) {
 		height: 50px;
+		& img {
+			height: 25px;
+		}
 	}
 `;
 
@@ -109,7 +125,7 @@ export default class Hero extends React.Component {
 		return (
 			<div>
 				<Enter>
-					<Text className="font-space">Enter The Borgverse</Text>
+					<img src={enter} alt="borgverse" />
 				</Enter>
 				<BackG>
 					<Root>
