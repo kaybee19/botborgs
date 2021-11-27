@@ -2,6 +2,8 @@ import React from 'react'
 import { useLocation } from "react-router-dom";
 import styled from 'styled-components';
 import Team from '../components/Team';
+import FactoryVid from '../components/FactoryVid';
+import CTA from '../components/CTA';
 import { data } from '../data'
 
 const BackG = styled('div')`
@@ -52,6 +54,8 @@ export default function Teams() {
 	return (
 		<BackG>
 				<Team team={markUp} />
+				<FactoryVid />
+				<CTA />
 		</BackG>
 	)
 }
