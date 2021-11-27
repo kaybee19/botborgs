@@ -4,9 +4,11 @@ import { futureVid } from '../assets/images';
 
 const Root = styled('div')`
   overflow: hidden;
-	& video {
-		height: 650px;
-		width: auto!important;
+  @media (max-width: 600px) {
+		& video {
+			height: 650px;
+			width: auto!important;
+		}
 	}
 `;
 
