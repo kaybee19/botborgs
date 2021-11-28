@@ -39,10 +39,7 @@ export default class Gif extends React.Component {
 
 		return (
 			<Body>
-        <Typewriter
-          onInit={(typewriter) => { typewriter.typeString(text).pauseFor(2).start() }}
-          options={{ delay: 10, cursor: '' }}
-        />				
+        <p style={{margin:0}}>{text}</p>				
 			</Body>
 		)
 	}

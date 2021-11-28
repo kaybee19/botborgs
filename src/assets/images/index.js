@@ -24,4 +24,7 @@ export {default as artists_2 } from './artists_2.png';
 export {default as developers } from './developers.png';
 export {default as nerds } from './nerds.png';
 export {default as enter } from './enter.png';
+export {default as enterGreen } from './enterGreen.png';
+export {default as enterHover } from './enterHover.gif';
 export {default as bots } from './bots.gif';
+export {default as botlings } from './botlings.png';

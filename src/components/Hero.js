@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import Gif from './Gif';
-import { panel1, panel2, enter, bots } from '../assets/images'
+import { panel1, panel2, enterGreen, enterHover, bots } from '../assets/images'
 
 const BackG = styled('div')`
 	background: linear-gradient(180deg, #4D3A8A 10.94%, #322459 44.27%, #0B0514 91.67%);
@@ -70,39 +70,36 @@ const ImageRight = styled('div')`
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat;
-    height: 340px;
-    width: 340px;
-    top: 275px;
-    left: 100px;
+    height: 355px;
+    width: 355px;
+    top: 267px;
+    left: 90px;
 	}
 	@media (max-width: 1450px) {
 		&:after {
-			height: 305px;
-			width: 305px;
-			top: 237.5px;
+			height: 312px;
+			width: 312px;
+			top: 234.5px;
 			left: 80px;
 		}
 	}
 	@media (max-width: 1200px) {
 		&:after {
-			height: 205px;
-			width: 205px;
-			top: 164px;
-			left: 60px;
+			height: 213px;
+			width: 213px;
+			top: 160px;
+			left: 55px;
 		}
 	}
 	@media (max-width: 900px) {
 		margin-left: auto;
-		&:after {
-			top: 164px;
-		}
 	}
 	@media (max-width: 600px) {
 		&:after {
-	    height: 170px;
-	    width: 170px;
-	    top: 137.5px;
-	    left: 50px;
+	    height: 177px;
+	    width: 177px;
+	    top: 134px;
+	    left: 45px;
 		}
 	}
 `;
@@ -174,25 +171,36 @@ const Text = styled('div')`
 	}
 `;
 
-export default class Hero extends React.Component {
-	render() {
-		return (
-			<div>
-				<Enter>
-					<img src={enter} alt="borgverse" />
-				</Enter>
-				<BackG>
-					<Root>
-						<ImageLeft>
-							<img src={panel1} alt="panel left" />
-							<Gif />
-						</ImageLeft>
-						<ImageRight>
-							<img className="gifClass" src={panel2} alt="panel right" />
-						</ImageRight>
-					</Root>
-				</BackG>
-			</div>
-		)
+export default function Hero() {
+
+	const [img, setImg] = React.useState(enterGreen);
+
+	const handleImg = () => {
+		setImg(enterHover);
 	}
+
+	const handleEnter = () => {
+		setImg(enterGreen);
+	}
+
+
+	return (
+
+		<div>
+			<Enter>
+				<img src={img} onMouseLeave={handleEnter} onMouseEnter={handleImg} alt="borgverse" />
+			</Enter>
+			<BackG>
+				<Root>
+					<ImageLeft>
+						<img src={panel1} alt="panel left" />
+						<Gif />
+					</ImageLeft>
+					<ImageRight>
+						<img className="gifClass" src={panel2} alt="panel right" />
+					</ImageRight>
+				</Root>
+			</BackG>
+		</div>
+	)
 }
