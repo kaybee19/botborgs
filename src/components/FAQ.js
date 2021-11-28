@@ -28,7 +28,7 @@ export default function FAQ(props) {
 
 	const [view, setView] = React.useState(false);
   const [ref, isVisible] = useInView({
-    threshold: 0.5,
+    threshold: 0,
   })
 
   // Trigger setView on viewport enter
