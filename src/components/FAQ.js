@@ -28,7 +28,7 @@ export default function FAQ(props) {
 
 	const [view, setView] = React.useState(false);
   const [ref, isVisible] = useInView({
-    threshold: 0,
+    threshold: 0.5,
   })
 
   // Trigger setView on viewport enter
@@ -51,7 +51,7 @@ export default function FAQ(props) {
 			<Root>
 				<p className="textHeader" style={{paddingBottom:0}}>FAQ</p>
 				<p className="textSubHeader">frequently asked questions</p>
-				<Body transitionDuration={1000} delay={200} visible={view}>
+				<Body transitionDuration={2000} delay={200} visible={view}>
 					{
 						data.map((d, i) => (
 							<FaqAccordion ques={d.q} ans={d.a} i={i} key={i} in={i === data.length-1 && "in"} />
