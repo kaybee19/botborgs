@@ -9639,6 +9639,11 @@ react-slick@^0.28.1:
     lodash.debounce "^4.0.8"
     resize-observer-polyfill "^1.5.0"
 
+react-smooth-list@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-smooth-list/-/react-smooth-list-1.0.2.tgz#c4a37abc563c9525146c38eb0ca62bd47a087a1b"
+  integrity sha512-EavzvoWW2S8w0E49whs8zEh85MiscsIcMfk5X6jQLR34AdYDtyENi93J8/yHokJEhsC5TxvWxLk5l6u4MqKdgg==
+
 react-transition-group@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.2.tgz#8b59a56f09ced7b55cbd53c36768b922890d5470"

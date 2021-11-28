@@ -39,9 +39,9 @@ export default class Footer extends React.Component {
 		return (
 			<Root>
 				<div>
-					<a class="linkClass" target="_blank" href="https://medium.com"><img src={medium} alt="medium" /></a>
-					<a class="linkClass" target="_blank" href="https://twitter.com"><img src={twitter} alt="twitter" /></a>
-					<a class="linkClass" target="_blank" href="https://discord.com"><img src={discord} alt="discord" /></a>
+					<a class="linkClass" target="_blank" href="https://medium.com/@botborgs"><img src={medium} alt="medium" /></a>
+					<a class="linkClass" target="_blank" href="https://twitter.com/Botborgs"><img src={twitter} alt="twitter" /></a>
+					<a class="linkClass" target="_blank" href="https://discord.com/invite/7vtqB5yshV"><img src={discord} alt="discord" /></a>
 				</div>
 				<Text className="font-space">
 					<img width="36" style={{marginLeft:0}} src={copy} alt="copyright" />

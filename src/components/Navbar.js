@@ -58,17 +58,17 @@ export default class Navbar extends React.Component {
 					<Logo src={botborgs} alt="logo" />
 				</Link>
 				<Body>
-					<a href="https://discord.com" target="_blank">
+					<a href="https://discord.com/invite/7vtqB5yshV" target="_blank">
 						<Image>
 							<img src={discord} alt="discord" width="25" />
 						</Image>
 					</a>
-					<a href="https://twitter.com" target="_blank">
+					<a href="https://twitter.com/Botborgs" target="_blank">
 						<Image>
 							<img src={twitter} alt="twitter" width="25" />
 						</Image>
 					</a>
-					<a href="https://medium.com" target="_blank">
+					<a href="https://medium.com/@botborgs" target="_blank">
 						<Image>
 							<img src={medium} alt="medium" width="25" />
 						</Image>

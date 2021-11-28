@@ -8,11 +8,6 @@ import Typewriter from 'typewriter-effect';
 
 const Root = styled('div')`
 	padding: 1rem 2rem;
-	&:last-of-type {
-		.accordion {
-			border-bottom: 0;
-		}
-	}
 	& .Typewriter__wrapper {
 		color: rgb(250, 178, 234);
 	}
@@ -102,7 +97,7 @@ export default function FaqAccordion(props) {
 
 	return (
 		<Root>
-      <Acc className="accordion" expanded={expanded === `panel${i}`} onChange={handleChange(`panel${i}`)}>
+      <Acc style={props.in ? {borderBottom: 0} : {}} className="accordion" expanded={expanded === `panel${i}`} onChange={handleChange(`panel${i}`)}>
         <AccordionSummary expandIcon={<ExpandIcon className="expand" />} onClick={handleClick} aria-controls="panel2bh-content" id="panel2bh-header">
         	<Typography variant='h5' sx={{paddingRight: '7.5%', margin: 0, color: 'white'}} className="font-coven">{ques}</Typography>
 				</AccordionSummary>

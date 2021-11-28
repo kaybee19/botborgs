@@ -2,6 +2,10 @@ import React from 'react'
 import styled from 'styled-components';
 import Typography from '@mui/material/Typography';
 
+// Hook for checking viewport + animation package
+import { useInView } from 'react-hook-inview';
+import SmoothList from 'react-smooth-list';
+
 const Root = styled('div')`
 	position: relative;
 	display: flex;
@@ -164,14 +168,24 @@ export default function Path(props) {
 
 	const { img, header, body, className } = props;
 
+	const [view, setView] = React.useState(false);
+  const [ref, isVisible] = useInView({
+    threshold: 0,
+  })
+
+  // Trigger setView on viewport enter
+  React.useEffect(() => {
+  	isVisible && setView(true)
+  }, [isVisible])
+
 	return (
-		<Root>
+		<Root ref={ref}>
 			<Border className="pathBorder" />
 			<Body className="pathBody">
-				<div>
+				<SmoothList transitionDuration={1000} delay={200} visible={view}>
 					<p style={{color:'white'}} className="textSub">{header}</p>
 					<Text className="font-robot" sx={{fontWeight:500}}>{body}</Text>
-				</div>
+				</SmoothList>
 				<Box />
 				<Image src={img} className={className} width='350' alt={header} />
 			</Body>

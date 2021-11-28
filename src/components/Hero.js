@@ -1,6 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
-import { panel1, panel2, enter } from '../assets/images'
+import Gif from './Gif';
+import { panel1, panel2, enter, bots } from '../assets/images'
+
+const BackG = styled('div')`
+	background: linear-gradient(180deg, #4D3A8A 10.94%, #322459 44.27%, #0B0514 91.67%);
+	padding-bottom: 4rem;
+`;
 
 const Root = styled('div')`
 	padding: 5rem 0 0;
@@ -9,12 +15,12 @@ const Root = styled('div')`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	& > div:first-of-type {
+		margin-top: -50px;
+	}
 	& img {
 		height: fit-content;
 		width: 750px;
-		&:first-of-type {
-			margin-top: -100px;
-		}
 		@media (max-width: 1450px) {
 			width: 659px;
 		}
@@ -41,16 +47,64 @@ const Root = styled('div')`
 		}
 	}
 	@media (max-width: 600px) {
-		padding: 2rem 0 0;
 		& img {
-			width: calc(100vw - 25px);
+			width: 375px;
 		}
 	}
 `;
 
-const BackG = styled('div')`
-	background: linear-gradient(180deg, #4D3A8A 10.94%, #322459 44.27%, #0B0514 91.67%);
-	padding-bottom: 4rem;
+const ImageLeft = styled('div')`
+	position: relative;
+	@media (max-width: 900px) {
+		margin-right: auto;
+	}
+`;
+
+const ImageRight = styled('div')`
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		background-image: url(${bots});
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+    height: 340px;
+    width: 340px;
+    top: 275px;
+    left: 100px;
+	}
+	@media (max-width: 1450px) {
+		&:after {
+			height: 305px;
+			width: 305px;
+			top: 237.5px;
+			left: 80px;
+		}
+	}
+	@media (max-width: 1200px) {
+		&:after {
+			height: 205px;
+			width: 205px;
+			top: 164px;
+			left: 60px;
+		}
+	}
+	@media (max-width: 900px) {
+		margin-left: auto;
+		&:after {
+			top: 164px;
+		}
+	}
+	@media (max-width: 600px) {
+		&:after {
+	    height: 170px;
+	    width: 170px;
+	    top: 137.5px;
+	    left: 50px;
+		}
+	}
 `;
 
 const Enter = styled('div')`
@@ -129,8 +183,13 @@ export default class Hero extends React.Component {
 				</Enter>
 				<BackG>
 					<Root>
-						<img src={panel1} alt="panel left" />
-						<img src={panel2} alt="panel right" />
+						<ImageLeft>
+							<img src={panel1} alt="panel left" />
+							<Gif />
+						</ImageLeft>
+						<ImageRight>
+							<img className="gifClass" src={panel2} alt="panel right" />
+						</ImageRight>
 					</Root>
 				</BackG>
 			</div>
