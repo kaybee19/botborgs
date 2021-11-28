@@ -14,7 +14,21 @@ const Root = styled('div')`
 		min-height: 470px;
 		margin-top: 2.5rem;
 		display: flex;
-    flex-direction: column;
+		& > div {
+			display: flex;
+	    flex-direction: column;
+	    position: relative;
+	    &:hover {
+    		&:before {
+    			position: absolute;
+    			content: "";
+    			width: calc(100% - 2.5px);
+    			height: calc(100% - 5px);
+	    		border: 2px solid rgb(114, 4, 90);
+    		}
+    		transition: 1s;
+    	}
+    }
 	}
 	& .alice-carousel__wrapper {
 		padding-left: 0!important;
@@ -71,14 +85,16 @@ const Image = styled('img')`
 const Member = (props) => {
 	return (
 		<Link to={`/team/${props.id}`} className="member linkClass">
-			<Image src={props.img} alt={props.title} />
-			<Body>
-				<div style={{padding: '1rem'}}>
-					<p className="font-space" style={{margin:0, fontSize:24}}>{props.name}</p>
-					<p style={{marginTop:0, fontSize:18, color:'#FAB2EA'}}>{props.title}</p>
-					<p style={{marginTop:0, fontSize:18}}>{props.text}</p>
-				</div>
-			</Body>
+			<div>		
+				<Image src={props.img} alt={props.title} />
+				<Body>
+					<div style={{padding: '1rem'}}>
+						<p className="font-space" style={{margin:0, fontSize:24}}>{props.name}</p>
+						<p style={{marginTop:0, fontSize:18, color:'#FAB2EA'}}>{props.title}</p>
+						<p style={{marginTop:0, fontSize:18}}>{props.text}</p>
+					</div>
+				</Body>
+			</div>
 		</Link>
 	)
 }
