@@ -62,7 +62,7 @@ export default class Ablities extends React.Component {
 				]
 			},
 			{
-				img: botlings, header: 'BOTLINGS', body: 'These are assembled through the hard work of 2 Botborgs and some $BOLT ‘s. The botlings however are an extremely intricate specimen of robot that requires a total of 6000 $BOLT ‘s to assemble. This may seem like alot of $BOLT but the larger your army of Botborgs, the faster they are able to produce the $BOLT ‘s necessary to begin the formation of a Botling. However, there is a catch. Over the 300 years of breeding the Botborgs have undergone an evolutionary adaptation in order to continue thriving in their ecosystem. This change will be reflected through the Botlings with a completely different art style.',
+				img: botlings, header: 'BOTLINGS', body: 'These are assembled through the hard work of 2 Botborgs and some $BOLT ‘s. The botlings however are an extremely intricate specimen of robot that requires a total of TBD $BOLT ‘s to assemble. This may seem like alot of $BOLT but the larger your army of Botborgs, the faster they are able to produce the $BOLT ‘s necessary to begin the formation of a Botling. However, there is a catch. Over the 300 years of breeding the Botborgs have undergone an evolutionary adaptation in order to continue thriving in their ecosystem. This change will be reflected through the Botlings with a completely different art style.',
 				list: [
 					{ text:'Access to exclusive planets and events that are only available to the Botlings. ' },
 					{ text:'Exclusive Botling only community in discord.' },
