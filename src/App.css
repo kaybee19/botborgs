@@ -1,38 +1,29 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'SpaceQuest';
+  src: url("assets/fonts/SpaceQuest.ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'SpaceQuest';
+  font-style: italic;
+  src: url("assets/fonts/SpaceQuest-Italic.ttf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'Coven';
+  src: url("assets/fonts/Coven.ttf");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@font-face {
+  font-family: 'Robotika';
+  src: url("assets/fonts/Robotika.ttf");
+}
+
+
+body {
+  margin: 0;
+  font-family: Robotika;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

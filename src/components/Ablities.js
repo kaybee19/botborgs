@@ -50,7 +50,7 @@ export default class Ablities extends React.Component {
 
 		const data = [
 			{
-				img: abilitiesBotborg, header: 'BOTBORGS', body: `The rulers of the Borgverse. Created by a grieving engineer attempting to reincarcerate his long lost wife through artificial intelligence and modern computing. All was going well until the engineer ran his final test: activating the program on a physical robot body that he had constructed. The lifeless robot miraculously sprung into motion and promptly put an end to the engineer's miserable life. Over the next 300 years, Botborgs reproduced and took control of the universe, renaming it to The Borgverse. Not only are Botborgs ruthless they are also extremely hard working when it comes to collecting $BOLT. $BOLT is the official currency that the Bots instituted within the Borgverse. Each Botborg produces 12 $BOLT per day. If you truly want to get a taste of what power feels like in the Borgverse, we recommend picking up a few Bot.`,
+				img: abilitiesBotborg, header: 'BOTBORGS', body: `The rulers of the Borgverse. Created by a grieving engineer attempting to reincarcerate his long lost wife through artificial intelligence and modern computing. All was going well until the engineer ran his final test: activating the program on a physical robot body that he had constructed. The lifeless robot miraculously sprung into motion and promptly put an end to the engineer's miserable life. Over the next 300 years, Botborgs reproduced and took control of the universe, renaming it to The Borgverse. Not only are Botborgs ruthless they are also extremely hard working when it comes to collecting $BOLT. $BOLT is the official currency that the Bots instituted within the Borgverse. Each Botborg produces 12 $BOLT per day. If you truly want to get a taste of what power feels like in the Borgverse, we recommend picking up a few Bots.`,
 				list: [
 					{ text:'Earn 12 $BOLT per day.' },
 					{ text:'Ability to breed a Botling through the mating of 2 Botborgs with the addition of $BOLT.' },
@@ -67,7 +67,7 @@ export default class Ablities extends React.Component {
 					{ text:'Exclusive Botling only community in discord.' },
 					{ text:'Various benefits within the Borgverse including faster travel and priority access to land expansions.' },
 					{ text:'Exclusive airdrops and whitelist collaborations.' },
-					{ text:'Governance over the Borgverse and all of its inhabitants (less power than the bots).' },
+					{ text:'Governance over the Borgverse and all of its inhabitants.' },
 					{ text:'TO BE CONTINUED' },
 				]
 			},

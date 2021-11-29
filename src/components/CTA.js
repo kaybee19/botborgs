@@ -69,13 +69,13 @@ export default class CTA extends React.Component {
 				<Root>
 					<Text className="textHeader">THE BOTBORGS ARE TAKING OVER THE METAVERSE</Text>
 					<Div>
-						<a target="_blank" class="linkClass" href="https://twitter.com">
+						<a target="_blank" class="linkClass" href="https://discord.com/invite/7vtqB5yshV">
 							<Call>
 								<img src={discord} width="18" alt="twitter-logo" />
 								<p className="font-coven" style={{margin:0}}>Join the community</p>
 							</Call>
 						</a>
-						<a target="_blank" class="linkClass" href="https://discord.com">
+						<a target="_blank" class="linkClass" href="https://twitter.com/Botborgs">
 							<Call>
 								<img src={twitter} width="18" alt="twitter-logo" />
 								<p className="font-coven" style={{margin:0}}>Follow Us</p>
