@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
 import Bot from './Bot';
-import { abilitiesBotborg, botlings } from '../assets/images'
+import { abilitiesBotborg, botlings } from '../assets/images';
+import botUniverse from '../assets/images/botUniverse.mp4';
 
 const Root = styled('div')`
 	max-width: 1100px;
@@ -72,7 +73,7 @@ export default class Ablities extends React.Component {
 				]
 			},
 			{
-				img: abilitiesBotborg, header: 'PLANET OWNERS', body: 'New planets are constantly being built in the Borgverse. Whether it be a PVP shooter, a gallery, a headquarters, an aim trainer, a residential area, a parkour arena, the possibilities are endless. However, planets often appear in the Borgverse completely empty without a structure in site. The bots are looking for monarchs to come in and instruct them on what needs to be built on these planets so that they can return to their former glory. The public will be able to bid on planet ownership with construction beginning immediately after a Monarch has been crowned as the owner of the planet. ',
+				vid: botUniverse, header: 'PLANET OWNERS', body: 'New planets are constantly being built in the Borgverse. Whether it be a PVP shooter, a gallery, a headquarters, an aim trainer, a residential area, a parkour arena, the possibilities are endless. However, planets often appear in the Borgverse completely empty without a structure in site. The bots are looking for monarchs to come in and instruct them on what needs to be built on these planets so that they can return to their former glory. The public will be able to bid on planet ownership with construction beginning immediately after a Monarch has been crowned as the owner of the planet. ',
 				list: [
 					{ text:'Planet auctions will be extremely scarce.' },
 					{ text:'The winner of the auction will have the ability to custom build anything (advertising, company/project headquarters, etc) they want on their planet with our art team behind the entire construction process. ' },
@@ -89,7 +90,7 @@ export default class Ablities extends React.Component {
 					<p style={{textAlign:'center'}} className="textHeader">The Bots and their abilities</p>
 					{
 						data.map((d, i) => (
-							<Bot img={d.img} header={d.header} body={d.body} list={d.list} key={i} />
+							<Bot img={d.img} vid={d.vid} header={d.header} body={d.body} list={d.list} key={i} />
 						))
 					}
 				</Root>

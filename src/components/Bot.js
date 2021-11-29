@@ -9,7 +9,7 @@ const Root = styled('div')`
 	padding: 1.5rem 0;
 	width: 100%;
 	position: relative;
-	& img {
+	& img, & video {
 		width: auto;
 		height: 375px;
 	}
@@ -22,23 +22,23 @@ const Root = styled('div')`
 	}
 	@media (max-width: 1100px) {
 		align-items: flex-start;
-		& img {
+		& img, & video {
 			height: 200px;
 		}
 	}
 	@media (max-width: 900px) {
-		& img {
+		& img, & video {
 			height: 150px;
 		}
 	}
 	@media (max-width: 750px) {
-		& img {
+		& img, & video {
 			height: 100px;
 		}
 	}
 	@media (max-width: 600px) {
 		flex-direction: column;
-		& img {
+		& img, & video {
 			width: 100%;
 			height: auto
 		}
@@ -65,11 +65,16 @@ const Body = styled('div')`
 
 export default function Bot(props) {
 
-	const { img, header, body, list } = props;
+	const { img, header, body, list, vid } = props;
 
 	return (
 		<Root>
-			<img src={img} alt={`${header}-bot`} />
+			{ vid ? (
+				<video style={{display: 'block'}} autoPlay muted loop>
+				  <source src={vid} type="video/mp4" />
+				</video>
+				) : <img src={img} alt={`${header}-bot`} />
+			}
 			<Body>
 				<div>
 					<p className="textSub">{header}</p>
