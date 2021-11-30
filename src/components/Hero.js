@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import Gif from './Gif';
 import { panel1, panel2, enterGreen, enterHover, bots } from '../assets/images'
+import borgVideo from '../assets/images/enterBorgverse.mp4'
 
 const BackG = styled('div')`
 	background: linear-gradient(180deg, #4D3A8A 10.94%, #322459 44.27%, #0B0514 91.67%);
@@ -171,9 +172,39 @@ const Text = styled('div')`
 	}
 `;
 
+const VideoWrapper = styled('div')`
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100vh;
+	width: 100%;
+  display: flex;
+  background: black;
+	& video {
+		height: auto;
+		width: 100%;
+		display: block;
+		pointer-events: none;
+	}
+`;
+
+const Video = () => {
+	return (
+		<VideoWrapper>
+			<video autoplay autoPlay>
+			  <source src={borgVideo} type="video/mp4" />
+			</video>
+		</VideoWrapper>
+	)
+}
+
 export default function Hero() {
 
 	const [img, setImg] = React.useState(enterGreen);
+	const [markup, setMarkup] = React.useState();
 
 	const handleImg = () => {
 		setImg(enterHover);
@@ -183,12 +214,21 @@ export default function Hero() {
 		setImg(enterGreen);
 	}
 
+	const handleClick = () => {
+		document.body.style.overflowY = "hidden"
+		setMarkup(Video);
+	  setTimeout(() => {
+	  	setMarkup(null);
+	  	document.body.style.overflowY = "visible"
+	  }, 9000);
+	}
 
 	return (
 
 		<div>
+			{markup}
 			<Enter>
-				<img src={img} onMouseLeave={handleEnter} onMouseEnter={handleImg} alt="borgverse" />
+				<img src={img} onClick={handleClick} onMouseLeave={handleEnter} onMouseEnter={handleImg} alt="borgverse" />
 			</Enter>
 			<BackG>
 				<Root>
