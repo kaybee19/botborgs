@@ -19,7 +19,6 @@
   src: url("assets/fonts/Robotika.ttf");
 }
 
-
 body {
   margin: 0;
   font-family: Robotika;
@@ -27,3 +26,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+  @keyframes fade-animation {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }

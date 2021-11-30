@@ -184,6 +184,12 @@ const VideoWrapper = styled('div')`
   display: flex;
   background: black;
 	& video {
+		opacity: 0;
+		animation-name: fade-animation;
+		animation-delay: 8.5s;
+		animation-duration: .5s;
+		animation-timing-function: linear;
+		animation-fill-mode: backwards;
 		height: auto;
 		width: 100%;
 		display: block;
