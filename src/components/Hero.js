@@ -183,6 +183,7 @@ const VideoWrapper = styled('div')`
 	width: 100%;
   display: flex;
   background: black;
+  align-items: center;
 	& video {
 		opacity: 0;
 		animation-name: fade-animation;
@@ -190,8 +191,8 @@ const VideoWrapper = styled('div')`
 		animation-duration: .5s;
 		animation-timing-function: linear;
 		animation-fill-mode: backwards;
-		height: auto;
-		width: 100%;
+		height: fit-content;
+    width: 100%;
 		display: block;
 		pointer-events: none;
 	}
