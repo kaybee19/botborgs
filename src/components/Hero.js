@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
-import Gif from './Gif';
+import { Link } from "react-router-dom";
 import { panel1, panel2, enterGreen, enterHover, bots } from '../assets/images'
 import borgVideo from '../assets/images/enterBorgverse.mp4'
+import Gif from './Gif';
 
 const BackG = styled('div')`
 	background: linear-gradient(180deg, #4D3A8A 10.94%, #322459 44.27%, #0B0514 91.67%);
@@ -198,6 +199,26 @@ const VideoWrapper = styled('div')`
 	}
 `;
 
+const Banner = styled(Link)`
+	text-decoration: none;
+	& > div {
+		background-color: #710559;
+		p {
+			padding: 0 0 .5rem;
+	    color: white;
+	    -webkit-text-stroke: white;
+	    position: relative;
+	    left: -50%;
+	    width: 100%;
+			animation-name: text-animation;
+			animation-duration: 10s;
+			animation-timing-function: linear;
+			animation-fill-mode: backwards;
+			animation-iteration-count: infinite;
+		}
+	}
+`;
+
 const Video = () => {
 	return (
 		<VideoWrapper>
@@ -248,6 +269,11 @@ export default function Hero() {
 					</ImageRight>
 				</Root>
 			</BackG>
+			<Banner>
+				<div>
+					<p className="textHeader">create a custom banner</p>
+				</div>
+			</Banner>
 		</div>
 	)
 }

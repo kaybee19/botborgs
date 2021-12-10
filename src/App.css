@@ -27,7 +27,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-  @keyframes fade-animation {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-  }
+@keyframes fade-animation {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes text-animation {
+  0% { left: -50%; }
+  100% { left: 100%; }
+}
