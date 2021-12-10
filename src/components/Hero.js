@@ -202,19 +202,41 @@ const VideoWrapper = styled('div')`
 const Banner = styled(Link)`
 	text-decoration: none;
 	& > div {
+		display: flex;
 		background-color: #710559;
 		p {
 			padding: 0 0 .5rem;
 	    color: white;
 	    -webkit-text-stroke: white;
 	    position: relative;
-	    left: -50%;
 	    width: 100%;
-			animation-name: text-animation;
 			animation-duration: 10s;
 			animation-timing-function: linear;
 			animation-fill-mode: backwards;
 			animation-iteration-count: infinite;
+			@media (max-width: 1300px) {
+				font-size: 35px
+			}
+			@media (max-width: 950px) {
+			    font-size: 28px;
+			}
+			@media (max-width: 760px) {
+			    font-size: 22px;
+			}
+			@media (max-width: 600px) {
+			    font-size: 18px;
+			}
+			@media (max-width: 450px) {
+			    font-size: 13px;
+			}
+		}
+		.text1 {
+	    left: 0%;
+	    animation-name: text-animation;
+		}
+		.text2 {
+			left: 0%;
+			animation-name: text-animation-2;
 		}
 	}
 `;
@@ -271,7 +293,8 @@ export default function Hero() {
 			</BackG>
 			<Banner>
 				<div>
-					<p className="textHeader">create a custom banner</p>
+					<p className="textHeader text1">create a custom banner</p>
+					<p className="textHeader text2">create a custom banner</p>
 				</div>
 			</Banner>
 		</div>
