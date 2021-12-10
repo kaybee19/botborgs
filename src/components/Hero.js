@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Link } from "react-router-dom";
 import { panel1, panel2, enterGreen, enterHover, bots } from '../assets/images'
 import borgVideo from '../assets/images/enterBorgverse.mp4'
 import Gif from './Gif';
@@ -199,7 +198,7 @@ const VideoWrapper = styled('div')`
 	}
 `;
 
-const Banner = styled(Link)`
+const Banner = styled('a')`
 	text-decoration: none;
 	& > div {
 		display: flex;
@@ -291,7 +290,7 @@ export default function Hero() {
 					</ImageRight>
 				</Root>
 			</BackG>
-			<Banner>
+			<Banner href="https://frames.botborgs.com" target="_blank">
 				<div>
 					<p className="textHeader text1">create a custom banner</p>
 					<p className="textHeader text2">create a custom banner</p>
