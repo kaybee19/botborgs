@@ -275,7 +275,7 @@ export default function Hero() {
 
 	return (
 
-		<div>
+		<div style={{overflow:'hidden'}}>
 			{markup}
 			<Enter>
 				<img src={img} onClick={handleClick} onMouseLeave={handleEnter} onMouseEnter={handleImg} alt="borgverse" />
