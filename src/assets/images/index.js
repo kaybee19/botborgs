@@ -28,3 +28,5 @@ export {default as enterGreen } from './enterGreen.png';
 export {default as enterHover } from './enterHover.gif';
 export {default as bots } from './bots.gif';
 export {default as botlings } from './botlings.png';
+export {default as download } from './download.png';
+export {default as downloadBG } from './downloadBG.png';
