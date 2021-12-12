@@ -381,7 +381,7 @@ export default function Hero() {
 					<span className="text span">drag the .zip file to a desktop folder</span>
 					<span className="text">right click the .zip and extract all</span>
 					<span className="text">double click "hoverbotborgs-105"</span>
-					<span className="text">double click and open "hover brogs"</span>
+					<span className="text">double click and open "hover borgs"</span>
 					<span className="text">have fun! report any bugs/suggestions in our discord please!</span>
 				</div>
 			</VideoWrapper>
