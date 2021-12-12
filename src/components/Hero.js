@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { panel1, panel2, enterGreen, enterHover, bots, downloadBG, download } from '../assets/images'
 import Gif from './Gif';
+import BotBorgs from '../assets/BotBorgs.zip';
 
 const BackG = styled('div')`
 	background: linear-gradient(180deg, #4D3A8A 10.94%, #322459 44.27%, #0B0514 91.67%);
@@ -410,7 +411,7 @@ export default function Hero() {
 		<div style={{overflow:'hidden'}}>
 			{markup}
 			<Enter>
-				<a href="http://martiangames.com/clients/BotBorgs/xfer/BotBorgs.zip" download>
+				<a href={BotBorgs} download>
 					<img src={img} onMouseLeave={handleEnter} onMouseEnter={handleImg} alt="borgverse" />
 				</a>
 				<img src={download}  onClick={handleClick} alt="download" />
