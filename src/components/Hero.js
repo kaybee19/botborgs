@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
 import { panel1, panel2, enterGreen, enterHover, bots } from '../assets/images'
-import borgVideo from '../assets/images/enterBorgverse.mp4'
 import Gif from './Gif';
 
 const BackG = styled('div')`
@@ -172,32 +171,6 @@ const Text = styled('div')`
 	}
 `;
 
-const VideoWrapper = styled('div')`
-	position: fixed;
-	z-index: 10;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 100vh;
-	width: 100%;
-  display: flex;
-  background: black;
-  align-items: center;
-	& video {
-		opacity: 0;
-		animation-name: fade-animation;
-		animation-delay: 8.5s;
-		animation-duration: .5s;
-		animation-timing-function: linear;
-		animation-fill-mode: backwards;
-		height: fit-content;
-    width: 100%;
-		display: block;
-		pointer-events: none;
-	}
-`;
-
 const Banner = styled('a')`
 	text-decoration: none;
 	& > div {
@@ -240,15 +213,6 @@ const Banner = styled('a')`
 	}
 `;
 
-const Video = () => {
-	return (
-		<VideoWrapper>
-			<video autoplay autoPlay>
-			  <source src={borgVideo} type="video/mp4" />
-			</video>
-		</VideoWrapper>
-	)
-}
 
 export default function Hero() {
 
@@ -263,21 +227,14 @@ export default function Hero() {
 		setImg(enterGreen);
 	}
 
-	const handleClick = () => {
-		document.body.style.overflowY = "hidden"
-		setMarkup(Video);
-	  setTimeout(() => {
-	  	setMarkup(null);
-	  	document.body.style.overflowY = "visible"
-	  }, 9000);
-	}
-
 	return (
 
 		<div style={{overflow:'hidden'}}>
 			{markup}
 			<Enter>
-				<img src={img} onClick={handleClick} onMouseLeave={handleEnter} onMouseEnter={handleImg} alt="borgverse" />
+				<a href="http://martiangames.com/clients/BotBorgs/xfer/BotBorgs.zip" download>
+					<img src={img} onMouseLeave={handleEnter} onMouseEnter={handleImg} alt="borgverse" />
+				</a>
 			</Enter>
 			<BackG>
 				<Root>
